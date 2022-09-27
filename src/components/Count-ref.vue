@@ -1,3 +1,10 @@
+<!--
+ * @Author: Hongzf
+ * @Date: 2022-09-26 17:06:10
+ * @LastEditors: Hongzf
+ * @LastEditTime: 2022-09-27 10:21:12
+ * @Description: 计算组件
+-->
 <template>
     <div>
         <h1 @click="add">{{ count }}</h1>

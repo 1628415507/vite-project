@@ -1,6 +1,12 @@
+<!--
+ * @Author: Hongzf
+ * @Date: 2022-09-26 15:32:10
+ * @LastEditors: Hongzf
+ * @LastEditTime: 2022-09-27 10:23:31
+ * @Description: 清单组件
+-->
 <template>
     <div>
-        <hr>
         <input type="text" v-model="title" @keydown.enter="addTodo" />
         <button v-if="active < all" @click="clear">清理</button>
         <ul v-if="todos.length">
@@ -22,7 +28,7 @@ import { ref, computed ,watchEffect} from 'vue';
 let title = ref('');
 // let todos = ref([{ title: '学习Vue', done: false }]);
 let todos = ref(JSON.parse(localStorage.getItem('todos')||'[]'));
-// 监听
+// 【watchEffect】： 监听
 watchEffect(() => {
     localStorage.setItem('todos', JSON.stringify(todos.value));
 });
@@ -40,7 +46,7 @@ function clear() {
         return v.done === false;
     });
 }
-//
+// 【computed】：计算属性
 let active = computed(() => {
     return todos.value.filter(v => !v.done).length;
 });
