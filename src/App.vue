@@ -6,4 +6,9 @@
     <!-- router-view负责渲染路由匹配的组件，
     我们可以通过把router-view放在不 同的地⽅，实现复杂项⽬的⻚⾯布局 -->
     <router-view></router-view>
+    <!-- <router-view v-slot="{ Component }">
+        <transition name="route" mode="out-in">
+            <component :is="Component" />
+        </transition>
+    </router-view> -->
 </template>

@@ -2,7 +2,7 @@
  * @Author: Hongzf
  * @Date: 2022-09-26 15:32:10
  * @LastEditors: Hongzf
- * @LastEditTime: 2022-09-27 10:23:31
+ * @LastEditTime: 2022-09-27 13:49:00
  * @Description: 清单组件
 -->
 <template>
