@@ -2,7 +2,7 @@
  * @Author: Hongzf
  * @Date: 2022-09-26 14:59:00
  * @LastEditors: Hongzf
- * @LastEditTime: 2022-09-28 16:02:59
+ * @LastEditTime: 2022-09-28 17:18:01
  * @Description: 
 -->
 <template>
@@ -32,6 +32,10 @@
     <hr />
     <h3>组件的JSX写法</h3>
     <TodoListJSX></TodoListJSX>
+    <!-- TS -->
+    <hr />
+    <h3>组件的TS写法</h3>
+    <TodoListTs></TodoListTs>
 </template>
 <script setup>
 // 组件
@@ -41,5 +45,6 @@ import TodoListTransition from '../components/TodoList/TodoList2-transition.vue'
 import TodoListTransitionGroup from '../components/TodoList/TodoList3-transition-group.vue';
 import TodoListJSTransition from '../components/TodoList/TodoList4-js-transition.vue';
 import TodoListJSX from '../components/TodoList/TodoList5-jsx.jsx';
+import TodoListTs from '../components/TodoList/TodoList6-ts.vue';
 </script>
 <style scoped></style>
