@@ -2,13 +2,13 @@
  * @Author: Hongzf
  * @Date: 2022-09-27 16:19:48
  * @LastEditors: Hongzf
- * @LastEditTime: 2022-09-28 10:03:44
+ * @LastEditTime: 2022-09-28 14:13:47
  * @Description:
  */
 // 引用原版vuex
-// import { createStore } from 'vuex';
+import { createStore } from 'vuex';
 // 引用自定义 vuex
-import { createStore } from './gvuex'
+// import { createStore } from './gvuex'
 const store = createStore({
     state() {
         return { count: 666 };

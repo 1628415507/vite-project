@@ -2,7 +2,7 @@
  * @Author: Hongzf
  * @Date: 2022-09-26 15:32:10
  * @LastEditors: Hongzf
- * @LastEditTime: 2022-09-27 13:49:00
+ * @LastEditTime: 2022-09-28 15:14:21
  * @Description: 清单组件
 -->
 <template>
@@ -34,6 +34,7 @@ watchEffect(() => {
 });
 // 添加任务清单
 function addTodo() {
+    // debugger
     todos.value.push({
         title: title.value,
         done: false

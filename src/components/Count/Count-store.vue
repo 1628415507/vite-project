@@ -2,7 +2,7 @@
  * @Author: Hongzf
  * @Date: 2022-09-26 17:06:10
  * @LastEditors: Hongzf
- * @LastEditTime: 2022-09-28 10:02:55
+ * @LastEditTime: 2022-09-28 14:14:00
  * @Description: 计算组件-vuex
 -->
 <template>
@@ -15,9 +15,9 @@
 <script setup>
 import { ref, computed } from 'vue';
 // 原版vuex
-// import { useStore } from 'vuex'; 
+import { useStore } from 'vuex'; 
 //手写vuex
-import { useStore } from '../../store/gvuex.js' 
+// import { useStore } from '../../store/gvuex.js' 
 
 let store = useStore();
 // 从计算属性中获取vuex
