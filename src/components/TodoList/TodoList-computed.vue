@@ -2,7 +2,7 @@
  * @Author: Hongzf
  * @Date: 2022-09-26 15:32:10
  * @LastEditors: Hongzf
- * @LastEditTime: 2022-09-28 15:14:21
+ * @LastEditTime: 2022-09-29 09:13:46
  * @Description: 清单组件
 -->
 <template>
@@ -24,10 +24,10 @@
 </template>
 
 <script setup>
-import { ref, computed ,watchEffect} from 'vue';
+import { ref, computed, watchEffect } from 'vue';
 let title = ref('');
 // let todos = ref([{ title: '学习Vue', done: false }]);
-let todos = ref(JSON.parse(localStorage.getItem('todos')||'[]'));
+let todos = ref(JSON.parse(localStorage.getItem('todos') || '[]'));
 // 【watchEffect】： 监听
 watchEffect(() => {
     localStorage.setItem('todos', JSON.stringify(todos.value));
@@ -64,3 +64,22 @@ let allDone = computed({
     }
 });
 </script>
+<style lang="scss" scoped>
+$padding: 10px;
+$white: #BCF;
+ul {
+    width: 500px;
+    margin: 0 auto;
+    padding: 0;
+    li {
+        &:hover {
+            cursor: pointer;
+        }
+        list-style-type: none;
+        margin-bottom: $padding;
+        padding: $padding;
+        background: $white;
+        box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
+    }
+}
+</style>
