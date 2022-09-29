@@ -2,7 +2,7 @@
  * @Author: Hongzf
  * @Date: 2022-09-26 14:59:00
  * @LastEditors: Hongzf
- * @LastEditTime: 2022-09-27 17:07:41
+ * @LastEditTime: 2022-09-29 11:00:32
  * @Description: 
 -->
 <template>
@@ -22,21 +22,21 @@
 <script setup>
 
 // 组件化
-import Rate from '../components/Rate/Rate1-defineProps.vue';
-import Rate2 from '../components/Rate/Rate2-event.vue';
-import Rate3 from '../components/Rate/Rate3-v-model.vue';
+import Rate from '../components/Rate/Rate1-defineProps.vue'
+import Rate2 from '../components/Rate/Rate2-event.vue'
+import Rate3 from '../components/Rate/Rate3-v-model.vue'
 
 // 方法
-import { ref } from 'vue';
-import { useMouse } from '../utils/mouse';
+import { ref } from 'vue'
+import { useMouse } from '../utils/mouse'
 //
-let { x, y } = useMouse();
+let { x, y } = useMouse()
 // console.log('【 x,y 】-16', x.value, y.value);
 // 评分
-let score1 = ref(3);
-let score2 = ref(3);
+let score1 = ref(3)
+let score2 = ref(3)
 function updateRate(num) {
-    score2.value = num;
+    score2.value = num
 }
-let score3 = ref(2);
+let score3 = ref(2)
 </script>

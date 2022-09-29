@@ -2,7 +2,7 @@
  * @Author: Hongzf
  * @Date: 2022-09-26 15:32:10
  * @LastEditors: Hongzf
- * @LastEditTime: 2022-09-27 15:34:49
+ * @LastEditTime: 2022-09-29 11:01:02
  * @Description: 动画-列表动画
 -->
 <template>
@@ -33,31 +33,31 @@
 </template>
 
 <script setup>
-import { ref, computed, watchEffect } from 'vue';
-let title = ref('');
+import { ref, computed, watchEffect } from 'vue'
+let title = ref('')
 // let todos = ref([{ title: '学习Vue', done: false }]);
-let todos = ref(JSON.parse(localStorage.getItem('todos') || '[]'));
+let todos = ref(JSON.parse(localStorage.getItem('todos') || '[]'))
 // 【watchEffect】： 监听
 watchEffect(() => {
-    localStorage.setItem('todos', JSON.stringify(todos.value));
-});
+    localStorage.setItem('todos', JSON.stringify(todos.value))
+})
 // 添加任务清单
-let showModal = ref(false);
+let showModal = ref(false)
 
 function addTodo() {
     // 错误提示
     if (!title.value) {
-        showModal.value = true;
+        showModal.value = true
         setTimeout(() => {
-            showModal.value = false;
-        }, 1500);
-        return false;
+            showModal.value = false
+        }, 1500)
+        return false
     }
     todos.value.push({
         title: title.value,
         done: false
-    });
-    title.value = '';
+    })
+    title.value = ''
 }
 // 清空
 function clear() {
@@ -68,20 +68,20 @@ function clear() {
 }
 // 【computed】：计算属性
 let active = computed(() => {
-    return todos.value.filter(v => v.done).length;
-});
+    return todos.value.filter(v => v.done).length
+})
 // 所有的任务清单
-let all = computed(() => todos.value.length);
+let all = computed(() => todos.value.length)
 let allDone = computed({
     get: function () {
-        return active.value === todos.value.length;
+        return active.value === todos.value.length
     },
     set: function (value) {
         todos.value.forEach(todo => {
-            todo.done = value;
-        });
+            todo.done = value
+        })
     }
-});
+})
 </script>
 
 <style>

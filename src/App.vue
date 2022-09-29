@@ -2,7 +2,7 @@
  * @Author: Hongzf
  * @Date: 2022-09-26 09:24:43
  * @LastEditors: Hongzf
- * @LastEditTime: 2022-09-28 18:10:27
+ * @LastEditTime: 2022-09-29 13:39:13
  * @Description: 
 -->
 <template>
@@ -33,6 +33,7 @@
             <el-aside width="200px">
                 <!-- router-link负责跳转不同的⻚⾯，相 当于Vue世界中的超链接a标签 -->
                 <div><router-link to="/">评分</router-link></div>
+                <div><router-link to="/login">登录</router-link></div>
                 <div><router-link to="/transition">任务清单</router-link></div>
                 <div><router-link to="/store">Store/Vuex</router-link></div>
                 <div><router-link to="/about">关于</router-link></div>

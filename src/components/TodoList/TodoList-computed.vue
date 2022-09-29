@@ -2,7 +2,7 @@
  * @Author: Hongzf
  * @Date: 2022-09-26 15:32:10
  * @LastEditors: Hongzf
- * @LastEditTime: 2022-09-29 09:13:46
+ * @LastEditTime: 2022-09-29 11:00:57
  * @Description: 清单组件
 -->
 <template>
@@ -24,45 +24,45 @@
 </template>
 
 <script setup>
-import { ref, computed, watchEffect } from 'vue';
-let title = ref('');
+import { ref, computed, watchEffect } from 'vue'
+let title = ref('')
 // let todos = ref([{ title: '学习Vue', done: false }]);
-let todos = ref(JSON.parse(localStorage.getItem('todos') || '[]'));
+let todos = ref(JSON.parse(localStorage.getItem('todos') || '[]'))
 // 【watchEffect】： 监听
 watchEffect(() => {
-    localStorage.setItem('todos', JSON.stringify(todos.value));
-});
+    localStorage.setItem('todos', JSON.stringify(todos.value))
+})
 // 添加任务清单
 function addTodo() {
     // debugger
     todos.value.push({
         title: title.value,
         done: false
-    });
-    title.value = '';
+    })
+    title.value = ''
 }
 // 清空
 function clear() {
     todos.value = todos.value.filter(v => {
-        return v.done === false;
-    });
+        return v.done === false
+    })
 }
 // 【computed】：计算属性
 let active = computed(() => {
-    return todos.value.filter(v => !v.done).length;
-});
+    return todos.value.filter(v => !v.done).length
+})
 // 所有的任务清单
-let all = computed(() => todos.value.length);
+let all = computed(() => todos.value.length)
 let allDone = computed({
     get: function () {
-        return active.value === 0;
+        return active.value === 0
     },
     set: function (value) {
         todos.value.forEach(todo => {
-            todo.done = value;
-        });
+            todo.done = value
+        })
     }
-});
+})
 </script>
 <style lang="scss" scoped>
 $padding: 10px;
