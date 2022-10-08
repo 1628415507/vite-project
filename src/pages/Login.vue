@@ -2,16 +2,16 @@
  * @Author: Hongzf
  * @Date: 2022-09-29 11:01:59
  * @LastEditors: Hongzf
- * @LastEditTime: 2022-09-29 14:45:21
+ * @LastEditTime: 2022-09-29 17:49:59
  * @Description: 
 -->
 <template>
     <el-form ref="formRef" :model="formData" label-width="auto" :rules="formRules">
         <el-form-item label="用户名" prop="name">
-            <el-input v-model="formData.name" size="small" />
+            <el-input v-model="formData.name" size="small"  />
         </el-form-item>
         <el-form-item label="密码" prop="password">
-            <el-input v-model="formData.password" type="password" size="small" />
+            <el-input v-model="formData.password"  v-focus type="password" size="small" />
         </el-form-item>
         <el-form-item>
             <el-button type="primary" @click="handleLogin" :loading="loading"> 登录 </el-button>

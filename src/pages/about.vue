@@ -2,7 +2,7 @@
  * @Author: Hongzf
  * @Date: 2022-09-28 15:05:02
  * @LastEditors: Hongzf
- * @LastEditTime: 2022-09-29 11:00:19
+ * @LastEditTime: 2022-10-08 10:21:21
  * @Description: 
 -->
 <template>
@@ -10,4 +10,6 @@
 </template>
 <script setup>
 import Heading from '../components/JSX/Heading.jsx'
+
+console.log('【 路由懒加载 】-14', )
 </script>

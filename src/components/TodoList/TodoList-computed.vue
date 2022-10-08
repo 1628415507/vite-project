@@ -2,12 +2,12 @@
  * @Author: Hongzf
  * @Date: 2022-09-26 15:32:10
  * @LastEditors: Hongzf
- * @LastEditTime: 2022-09-29 11:00:57
+ * @LastEditTime: 2022-09-29 15:51:39
  * @Description: 清单组件
 -->
 <template>
     <div>
-        <input type="text" v-model="title" @keydown.enter="addTodo" />
+        <input type="text" v-model="title" @keydown.enter="addTodo" v-focus/>
         <button v-if="active < all" @click="clear">清理</button>
         <ul v-if="todos.length">
             <li v-for="(todo, index) in todos" :key="index">

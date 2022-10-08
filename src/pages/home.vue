@@ -2,7 +2,7 @@
  * @Author: Hongzf
  * @Date: 2022-09-26 14:59:00
  * @LastEditors: Hongzf
- * @LastEditTime: 2022-09-29 11:00:32
+ * @LastEditTime: 2022-10-08 10:21:54
  * @Description: 
 -->
 <template>
@@ -29,9 +29,11 @@ import Rate3 from '../components/Rate/Rate3-v-model.vue'
 // 方法
 import { ref } from 'vue'
 import { useMouse } from '../utils/mouse'
+console.log('【 无路由懒加载 】-14', )
+
 //
 let { x, y } = useMouse()
-// console.log('【 x,y 】-16', x.value, y.value);
+console.log('【 x,y 】-16', x.value, y.value)
 // 评分
 let score1 = ref(3)
 let score2 = ref(3)
