@@ -2,7 +2,7 @@
  * @Author: Hongzf
  * @Date: 2022-09-26 09:24:43
  * @LastEditors: Hongzf
- * @LastEditTime: 2022-09-29 13:39:13
+ * @LastEditTime: 2022-10-08 11:18:12
  * @Description: 
 -->
 <template>
@@ -47,6 +47,10 @@
         </el-container>
     </el-container>
 </template>
+<script>
+
+</script>
+
 <style scoped>
 .el-header,
 .el-footer {
