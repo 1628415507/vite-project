@@ -1,3 +1,10 @@
+<!--
+ * @Author: Hongzf
+ * @Date: 2022-09-26 09:24:43
+ * @LastEditors: Hongzf
+ * @LastEditTime: 2022-10-11 15:31:52
+ * @Description: 
+-->
 <script setup>
 import { ref } from 'vue'
 
@@ -31,6 +38,28 @@ const count = ref(0)
     in your IDE for a better DX
   </p>
   <p class="read-the-docs">Click on the Vite and Vue logos to learn more</p>
+  
+<template>
+  <div>
+    456465456
+    <!-- <model-obj
+      class="model-box"
+      :backgroundAlpha="bgAlpha"
+      :backgroundColor="bgColor"
+      src="public/static/model/obj/tree.obj"
+    ></model-obj> -->
+  </div>
+</template>
+<script setup>
+
+import { ModelObj  } from 'vue-3d-model';
+// console.log('【 ModelObj 】-13', ModelObj)
+
+// const bgAlpha = ref(0.5);
+// const bgColor = ref('#ff0');
+// console.log('【 ModelCollada 】-14', ModelCollada)
+</script>
+
 </template>
 
 <style scoped>
