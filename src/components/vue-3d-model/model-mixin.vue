@@ -325,7 +325,7 @@ export default defineComponent({
       this.$emit('mousedown', event, intersected);
     },
     onMouseMove(event: MouseEvent) {
-      console.log(this.$attrs)
+      // console.log(this.$attrs)
       if (!this.$attrs.onMousemove) return;
 
       const intersected = this.pick(event.clientX, event.clientY);
