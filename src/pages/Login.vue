@@ -2,7 +2,7 @@
  * @Author: Hongzf
  * @Date: 2022-09-29 11:01:59
  * @LastEditors: Hongzf
- * @LastEditTime: 2022-10-08 10:44:36
+ * @LastEditTime: 2022-10-12 16:19:02
  * @Description: 
 -->
 <template>
@@ -45,28 +45,30 @@ const formData = reactive({
     password: ''
 })
 const loading = ref(false)
+const formRef = ref(null)//ref需要写在最外层
+
 function handleLogin() {
     console.log('【 formData 】-40', formData)
-    const formRef = ref()
     console.log('【 formRef 】-46', formRef)
-    // formRef.value.validate(async valid => {//TODO:无法调用验证方法
-    // console.log('【 valid 】-44', valid)
-    // if (valid) {
-    //     loading.value = true
-    //     const { code, message } = await useStore.login(loginForm)
-    //     loading.value = false
-    //     if (code === 0) {
-    const router = useRouter() //TODO?
-    console.log('【 router 】-54', router)
-    router.replace('/') //toPath
-    //         // router.replace(toPath || '/')
-    //     } else {
-    //       Message({ message: '登录失败', type: 'error' })
-    //     }
-    // } else {
-    //   Message({ message: '登录失败', type: 'error' })
-    // }
-    // })
+    formRef.value.validate(async valid => {
+        //TODO:无法调用验证方法
+        // console.log('【 valid 】-44', valid)
+        // if (valid) {
+        //     loading.value = true
+        //     const { code, message } = await useStore.login(loginForm)
+        //     loading.value = false
+        //     if (code === 0) {
+        const router = useRouter() //TODO?
+        console.log('【 router 】-54', router)
+        router.replace('/') //toPath
+        //         // router.replace(toPath || '/')
+        //     } else {
+        //       Message({ message: '登录失败', type: 'error' })
+        //     }
+        // } else {
+        //   Message({ message: '登录失败', type: 'error' })
+        // }
+    })
     // try{
     //   // const res = await login(data.form)
     //   // console.log(res)
