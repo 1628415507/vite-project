@@ -11,6 +11,7 @@
   "dependencies": {
     "@vueuse/core": "^9.3.0",
     "element3": "^0.0.40",
+    "html2canvas": "^1.4.1",
     "rollup-plugin-visualizer": "^5.8.2",
     "vue": "^3.2.37",
     "vue-router": "^4.0.13",
